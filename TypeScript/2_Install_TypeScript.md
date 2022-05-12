@@ -64,7 +64,7 @@ nvm을 설치하면서 같이 설치되는 Node Package Manager. 전 세계의 �
   * ``npm init -y`` 를 입력한다. 
     *  npm을 통해 다운받은 패키지들을 관리할 수 있는 package.json 문서를 생성한다. 
     * -y는 yes를 의미하는데 default한 문서를 생성할 수 있도록 하는 옵션이다.
-  * ``npm i typescript -D`` 를 입력한다.
+  * `_`npm i typescript -D_`` 를 입력한다.
     * package.json 문서의 Devdependencies 에 typescript가 추가되며 node_modules 디렉토리 안에 typescript가 다운로드 된다. 
   * 타입스크립트 명령 앞에 npx 를 붙여서 사용한다. 또는 package.json 문서의 scripts부분에 tsc 명령에 이름을 붙여 사용한다.
     * Ex1)`` npx tsc ``
