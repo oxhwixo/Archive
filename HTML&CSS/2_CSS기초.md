@@ -534,22 +534,28 @@ Html의 속성은 attributes, CSS와 JS에서는 Properties.
 
 ### 외부 여백 : margin
 
-#### margin : 요소의 외부 여백(공간)을 지정하는 단축 속성
+#### margin
+
+1. margin : 요소의 외부 여백(공간)을 지정하는 단축 속성
 
 * 기본값 = 0 : 외부 여백 없음
 * auto : 브라우저가 여백을 계산. 가로(세로) 너비가 있는 요소의 가운데 정렬에 활용한다.
 * 단위 : px, em 등
 * 음수 사용 가능. 음수를 사용하면 여백이 줄어들며 요소들이 겹쳐진다.
 
-[  margin-top, margin-bottom, margin-left, margin-right  ]
 
-margin: 10px; --> 모든 방향에 10px 초기화
 
-margin: 10px 20px; --> 값이 2개면 앞의 값은 top,bottom 뒤의 값은 left, right
+2. 크기를 설정하는 규칙
 
-margin: 10px 20px 30px; --> top, left-right, bottom
+* [  margin-top, margin-bottom, margin-left, margin-right  ]
 
-margin: 10px 20px 30px 40px; --> top, right, bottom, left
+* margin: 10px; --> 모든 방향에 10px 초기화
+
+* margin: 10px 20px; --> 값이 2개면 앞의 값은 top,bottom 뒤의 값은 left, right
+
+* margin: 10px 20px 30px; --> top, left-right, bottom
+
+* margin: 10px 20px 30px 40px; --> top, right, bottom, left
 
 
 
@@ -559,14 +565,17 @@ margin: 10px 20px 30px 40px; --> top, right, bottom, left
 
 ### 내부 여백 : padding
 
-#### padding : 요소의 내부 여백을 지정하는 단축 속성 
+1. padding : 요소의 내부 여백을 지정하는 단축 속성 
 
-* 기본값 = 0 : 내부 여백 없음
-* 단위 : px, em 등
-* % : 부모 요소의 가로 너비에 대한 비율로 지정
-* 패딩은 요소의 내부 여백이기 때문에 요소 자체의 크기가 커지게 만든다.
+  * 기본값 = 0 : 내부 여백 없음
+  * 단위 : px, em 등
+  * % : 부모 요소의 가로 너비에 대한 비율로 지정
+  * 패딩은 요소의 내부 여백이기 때문에 요소 자체의 크기가 커지게 만든다.
 
 
+
+2. 크기를 설정하는 규칙
+   * margin과 같음
 
 ---
 
@@ -702,17 +711,24 @@ border-radius: 10px;
 
 ### 글꼴
 
-* font-size : 10px
+* font-size : (ex)10px;
 
-  기본은 16px
+  글자 크기 설정. 기본은 16px
 
-* font-weight :700 글자의 두께! 
+* font-weight :(ex)700;
 
-  기본은 400, bold는 700. 100~900까지 지정가능
+  글자의 두께 설정. 기본은 400, bold는 700. 100~900까지 지정가능
 
-* font-style : italic;
+  * 100 - lighter
+  * 400 - normal
+  * 700 - bold
+  * 900 - bolder
 
-* font-family : sans-serif;
+* font-style : (ex)italic;
+
+  글꼴의 스타일 설정. 주로 이탤릭체를 설정하기 위해서 사용
+
+* font-family : (ex)sans-serif;
 
   사용할 글꼴 후보들과, 마지막에 필수로 글꼴 계열 입력 (serif등)
 
@@ -729,17 +745,25 @@ border-radius: 10px;
     * Cursive : 필기체
     * Fantasy : 장식체
 
-* lien-height : 1.4; 한 줄의 높이. 행간과 유사
+* lien-height : (ex)1.4;
 
-  요소의 글꼴 크기의 배수로 지정. ex) 글자 크기의 1.4배
+  한 줄의 높이. 행간과 유사함. 요소의 글꼴 크기의 배수로 지정한다. ex) 글자 크기의 1.4배
 
-* color:  rgb(0,0,0) 글자수 색상
+* color:  (ex)rgb(0,0,0) 
 
-* text-align : left, right, center : 정렬
+  글자의 색상을 설정
 
-* text-decoration : none, underline, line-through : 문자 장식(선)
+* text-align : left, right, center
 
-* text-indent: 50 : 들여쓰기. 음수 넣으면 내어쓰기
+  글자 정렬
+
+* text-decoration : none, underline, line-through
+
+  문자를 선으로 장식
+
+* text-indent: (ex)50
+
+  들여쓰기. 음수 넣으면 내어쓰기
 
 
 
@@ -805,30 +829,37 @@ border-radius: 10px;
 
 ### 배치
 
-포지션은 요소의 위치를 직접 지정하는 것이 아니라 그 지정을 위한 기준을 제공
+포지션은 요소의 위치를 직접 지정하는 것이 아니라 그 지정을 위한 기준을 제공하는 속성
 
-* position : 요소의 위치 지정 기준!!!
+* position : 요소의 위치 지정 기준을 정한다.
 
   * static : 기준 없음 (기본)
 
   * relative : 요소 자신을 기준 
 
-    자기 자신이 있는 자리를 기준으로 함. 자기 자신을 기준으로 배치하는 것은 잘 사용 안함
+    자기 자신이 있는 자리를 기준으로 함. 단, 자기 자신을 기준으로 배치하는 것은 잘 사용 안함
 
   * absolute : 위치 상 부모 요소를 기준
 
-    * 포지션 앱솔루트가 부여된 요소는 주변 요소들과의 상호작용이 사라짐
-    * 위치 상이란?? 부모요소에 position을 주지 않으면 뷰포트가 부모가 됨. 부모요소에  포지션이 부여되어있지 않으면 static이라는 것인데, 이때는 더 상위 부모를 찾아가게되고 결국 최상위 부모인 뷰포트로 찾아가게됨
+    * 포지션 앱솔루트가 부여된 요소는 **주변 요소들과의 상호작용이 사라짐**
+
+    * 위치 상이란??
+
+      position이 지정되어 있는 부모 요소를 말한다. 
+
+      모든 부모요소에 position이 기본 값이라면? 뷰포트가 부모가 된다. 부모요소에  포지션이 부여되어있지 않으면 static이라는 것인데, 이때는 더 상위 부모를 찾아가게되고 결국 최상위 부모인 뷰포트로 찾아가게됨
 
   * fixed : 뷰포트를 기준
 
-    * 앱솔루트처럼 주변 요소들과의 상호작용 사라짐
+    * absolute 처럼 주변 요소들과의 상호작용 사라짐
 
     * 스크롤을 해도 사라지지않고 화면에 고정된 요소 만들때 사용.
 
 * top, bottom, left, right, z-index 등 position의 기준을 통해서 사용
-  
+
+  * (ex) top: 0; bottom: 0; 
   * 요소의 각 방향별 거리 지정
+
 * **position 속성의 값으로 absolute, fixed가 지정된 요소는 display 속성이 block 요소로 변함!!**
 
 ---
@@ -951,6 +982,8 @@ border-radius: 10px;
 
   div 크기가 200*200 일 때 이 안에 hello 라고 적은 글< content라고 할 수 있음. content가 존재할 때, flex-grow는 content의 크기를 뺀 나머지 공간에 대해서 적용됨. 따라서 flex-grow를 1:1:2 같이 설정 했지만 각각의 content 크기가 다르다면 사용자 눈으로 보았을 때엔 1:1:2로 보이지않음. 그 content크기만큼의 공간을 기본너비 라고 함.
 
+  (basis=0을 하지 않으면 flex-grow/shrink로 인해 크기가 조정된 div안에 내용물을 넣었을 때 조정되었던 크기가 일그러짐.)
+  
   * auto : 요소의 content 너비 -기본
   * 단위 : px, em 등
   * 0 : 기본 너비가 없어짐. content 크기 상관 없이 flex-grow를 적용 가능해짐
@@ -1036,3 +1069,92 @@ border-radius: 10px;
   * hidden : 숨김
 
 변환함수에서 원근법 관련한 부분 이해가 잘 안가서 다시 찾아볼 것 !
+
+---
+
+### Grid
+
+flex가 주 축의 정렬 방식을 row, column 중에 선택해서 1차원적인 배치를 하는것과 다르게, grid는 row, column을 둘다 주 축으로 사용하여 2차원 배치를 하는데 사용한다.
+
+### container 속성
+
+1. display: grid;
+
+container 역할을 할 곳에 display 속성의 값을 grid를 입력해서 gridbox를 만들어준다. gridbox 안의 아이템들은 grid cell이라고 부른다.
+
+2. grid-template-columns, grid-template-rows
+
+   * grid-template-columns: (ex) 100px 100px 100px
+
+     100px씩 세개의 공간을 만든다는 뜻. 원하는 사이즈의 원하는 갯수만큼의 열 공간을 만든다.
+
+   * grid-template-row: (ex) 100px 100px 100px
+
+   * repeat(5, 100px) : 100px 씩 5번 반복한다는 뜻으로, 반복해서 같은 값을 입력해야할 때는 repeat을 사용한다.
+
+   * 사이즈를 지정할 때는 보통 **픽셀을 넣기 보다는 반응형을 위해서 %나 fr을 사용**한다.
+
+     * repeat(5, 20%)
+     * grid-template-columns : 1fr 2fr 1fr;
+
+   * grid-auto-rows : column을 기준으로 줄넘김이 발생하기 때문에 column에 따라 달라지는 row를 자동 계산해서 모든 일괄적으로 크기를 지정하는 속성. 
+
+     * minmax(최소크기, auto)를 value값으로 넣으면 grid cell 안에 컨텐츠가 최소 크기를 벗어나면 자동으로 계산해서 해당 row 크기를 그 값으로 바꿔주고 나머지 row는 최소 크기를 유지하도록 할 수 있다.
+
+3. grid-column-gap, grid-row-gap, grid-gap, padding
+
+   * column과 row에 각각 따로 gap을 설정할 수 있다.
+   * grid-gap을 사용해서 일괄적으로 같은 gap 설정도 가능. 단, gird-gap은 cell들 사이사이에 공간을 주는 것이기 때문에 grid-cell 외부에는 여백이 생기지 않는다. 외부까지 여백을 주고 싶다면 같은 값의 padding 속성을 추가한다.
+     
+     
+
+### item 속성
+
+1. grid-column-start, grid-column-start, grid-row-start, grid-row-start
+
+   grid cell 범위 설정. 만들어진 grid container의 grid line을 이용해서 범위를 지정할 수 있다. 아래와 같이 축약형도 존재한다.
+
+   * grid-column : start / end
+   * grid-row : start / end 
+   * start와 end는 각각 직접 grid line을 입력할 수도 있지만 몇개의 cell을 차지할 것인지 지정할 수 도 있다. 이 경우에는 숫자 앞에 span을 붙인다.
+
+### area
+
+item 속성으로 grid line을 이용한 범위 지정 말고 다른 방식의 범위 지정, 영역 설정 방법.
+
+1. container 속성
+
+   * grid-template-areas : 
+     	(ex)
+       	'a a a'
+       	'b c c'
+       	'b d g'
+       	'e f g'
+
+     예시 처럼 각 셀에 영역 이름을 지어준다.
+
+2. item 속성
+
+   grid-area: (ex)a 
+
+   item이 cotainer에서 설정한 a영역을 차지할 수 있게 한다.
+
+### 그외
+
+* object-fit
+
+  * fill : 기본값, 요소에 크기에 맞게 꽉채워 보여줌, 필요한 경우 오브젝트가 늘어나거나 찌그러짐.
+  * contain : 요소의 가로나 세로크기에 가능한 만큼 맞추어 크기가 조정되고, 비율은 고정된 상태. 남는 공간이 발생할 수 있다.
+  * cover : 요소의 가로나 세로크기에 가능한 맞춰져 크기가 조정되고, 비율은 고정된 상태입니다. 개체 크기에 맞게 잘리며, 가득 채울때까지 확대된다.
+  * none : 크기가 조정되지 않고 원본사이즈로 처리. 크면 잘리고, 작으면 남는다.
+  * scale-down : 크기를 아무것도 지정되지 않거나 혹은 contain이 지정되어 있는 것처럼 변경. 이는 원본 크기보다 작아지는 결과를 보여준다.
+
+* object-position
+
+  * object-fit을 이용했을 때 cover나 none속성으로 이미지가 잘려서 보일 때 보일 위치를 지정
+
+  * x축 키워드 : left, center, right
+
+  * y축 키워드 : top, center, bottom
+
+  * 수치는 px이나 %를 이용해서 디테일한 위치를 지정 가능
