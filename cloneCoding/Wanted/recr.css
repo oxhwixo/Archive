@@ -1,0 +1,578 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css");
+
+* {
+  /* border: 2px solid black; */
+  box-sizing: border-box;
+  font-family: "Pretendard Variable", Pretendard !important;
+}
+
+*::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  font: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+a:focus {
+  outline: none;
+}
+.round-button {
+  border: 1px solid grey;
+  border-radius: 18px;
+  padding: 10px;
+}
+.nav {
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #e1e2e3;
+  background-color: white;
+  z-index: 999;
+  min-width: 930px;
+}
+
+.nav__wrap {
+  display: flex;
+  width: 1060px;
+  height: 100%;
+  justify-content: space-between;
+}
+.nav__top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav__menu-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+}
+.nav__logo {
+  display: flex;
+  justify-content: center;
+  height: 26px;
+}
+.nav__menu-wrap {
+  display: flex;
+}
+.nav__main li {
+  position: relative;
+  vertical-align: middle;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  padding: 15px 15px 12px;
+  display: inline-block;
+  color: black;
+}
+.nav__main li em {
+  font-size: 3px;
+  color: #046afe;
+  position: absolute;
+  top: 9px;
+  right: -6px;
+  font-weight: 400;
+}
+.nav__menu-item:first-child {
+  border-bottom: 3px solid #046afe;
+}
+.nav__menu-item:not(:first-child):hover {
+  border-bottom: 3px solid rgb(207, 207, 207);
+}
+.nav__aside {
+  display: flex;
+  align-items: center;
+}
+.nav__aside-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav__aside li {
+  padding: 0 10px;
+}
+.nav__sign {
+  margin-right: 6px;
+}
+.nav__sign-button {
+  font-size: 14px;
+  color: #333;
+  font-weight: 600;
+}
+div.line {
+  background-color: #e1e2e3;
+  width: 1px;
+  height: 10px;
+}
+li.nav__dashboard {
+  padding: 0;
+}
+.nav__dashboard-button {
+  font-size: 13px;
+  color: #666;
+  line-height: 11px;
+  height: 30px;
+  border: 1px solid #e1e2e3;
+  border-radius: 15px;
+  margin-left: 15px;
+  font-weight: 400;
+}
+.setting {
+  padding-top: 50px;
+  width: 1060px;
+  margin: 0 auto;
+}
+.job-select {
+  margin: 40px 0 30px;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+}
+.job-select button {
+  display: flex;
+  font-weight: 700;
+}
+.job-select button div:first-child {
+  line-height: 30px;
+  margin-right: 15px;
+}
+.circle-box {
+  width: 26px;
+  height: 26px;
+  border: 1px solid #e1e2e3;
+  border-radius: 50%;
+}
+.circle-box.tag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+.circle-box.tag svg {
+  width: 14px;
+  height: 14px;
+}
+.line-grey + div {
+  position: relative;
+}
+
+.job-select button:last-child {
+  margin-left: 30px;
+  padding: 0 0 0 30px;
+  border-left: 2px solid #e1e2e3;
+  font-weight: 500;
+}
+.etc-select {
+  display: flex;
+  justify-content: space-between;
+}
+.etc-select__left {
+  display: flex;
+  gap: 10px;
+}
+.line-grey {
+  height: 1px;
+  width: 1060px;
+  background-color: #e1e2e3;
+  margin: 25px auto;
+}
+.square-box {
+  border: 1px solid #e1e2e3;
+  padding: 12.5px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+.square-box span:first-child {
+  margin-right: 10px;
+}
+.blue {
+  color: #3366ff;
+}
+.square-box span:last-child {
+  margin: 0;
+}
+.tag-selec {
+  display: flex;
+  overflow-x: scroll;
+  flex-shrink: 0;
+  white-space: nowrap;
+  margin-bottom: 25px;
+}
+.tag-selec li {
+  font-size: 13px;
+  color: #333;
+  padding: 9px 14px 8px;
+  background-color: rgb(255, 234, 234);
+  border-radius: 20px;
+  margin-right: 8px;
+}
+
+main {
+  width: 1060px;
+  margin: 0 auto;
+  padding-top: 38px;
+}
+.line-grey.long {
+  width: 100%;
+}
+main button:first-child {
+  color: #3366ff;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+main button:first-child span {
+  margin-left: 10px;
+  padding-top: 2px;
+}
+.recommend {
+  margin-bottom: 20px;
+}
+.recommend h1 {
+  margin-bottom: 14px;
+  font-size: 22px;
+  font-weight: 600;
+}
+.recommend ul {
+  display: flex;
+  gap: 20px;
+}
+.recommend li {
+  width: 20%;
+  height: 272px;
+  border: 1px solid #e1e2e3;
+  border-radius: 4px;
+  position: relative;
+}
+.recommend li img {
+  width: 100%;
+  height: 147px;
+  object-fit: cover;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+.recommend-info {
+  padding: 40px 20px 0;
+}
+.recommend-info h2 {
+  font-weight: 600;
+}
+.recommend-info h5 {
+  font-size: 14px;
+  margin-top: 6px;
+  color: #999;
+}
+.mark {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #e1e2e3;
+  background-size: contain;
+  background-color: white;
+  position: absolute;
+  left: 19px;
+  bottom: 36%;
+}
+.main-section ul {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.main-section__wrapper {
+  margin-top: 20px;
+  position: relative;
+}
+.main-section__wrapper a img {
+  width: 250px;
+  height: 187.5px;
+  border-radius: 4px;
+}
+.main-section__wrapper h2 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 14px;
+}
+.name {
+  font-size: 14px;
+  margin-top: 10px;
+  font-weight: 700;
+}
+.article-icon {
+  margin: 5px 0 10px;
+  padding: 1px 6px;
+  font-size: 10px;
+  line-height: normal;
+  color: #00aead;
+  border: 1px solid #00aead;
+  text-align: center;
+  display: inline-block;
+}
+.country {
+  font-size: 14px;
+  color: #999;
+  margin-bottom: 10px;
+}
+.money {
+  font-size: 14px;
+}
+.main-section__wrapper button {
+  width: 40px;
+  height: 50px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.back-effect {
+  width: 70px;
+  height: 100%;
+  background: linear-gradient(90deg, hsla(0, 0%, 100%, 0), #fff 50%);
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+/* modal 시작 */
+.modal {
+  display: none;
+}
+.modal {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.modal__container {
+  border-radius: 5px;
+  width: 400px;
+  height: 621.5px;
+  background-color: white;
+  margin: 100px auto;
+  padding: 20px;
+  position: relative;
+  overflow: scroll;
+}
+/* modal page 1 시작 */
+
+.long-round-button {
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  border-radius: 25px;
+  background-color: #fff;
+  border: 1px solid #36f;
+  font-size: 16px;
+  letter-spacing: normal;
+  color: #36f;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  font-weight: 600;
+}
+.first-page {
+  display: none;
+}
+.modal__container .modal__logo {
+  width: 93px;
+  height: 24px;
+  margin: 0 auto 80px;
+}
+.modal__container h1 {
+  line-height: 40px;
+  font-size: 30px;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.modal__container h2 {
+  color: #767676;
+  line-height: 24px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.modal__input-container div:first-child {
+  font-size: 14px;
+  color: #767676;
+  margin-bottom: 10px;
+}
+input {
+  width: 100%;
+  height: 45px;
+  border-radius: 4px;
+  border: 1px solid #e1e2e3;
+  margin-bottom: 20px;
+  font-size: 17px;
+  padding-left: 16px;
+}
+input:focus {
+  outline: none !important;
+  border: 1px solid #046afe;
+}
+input::placeholder {
+  color: #b5b5b5;
+}
+input:disabled {
+  background-color: #f2f4f7;
+}
+.modal__input-container .long-round-button {
+  border: none;
+  background-color: #046afe;
+  color: white;
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+}
+.modal__other-login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.modal__other-login-container div:first-child,
+.modal__other-login-container div:nth-child(2) {
+  margin-top: 10px;
+  color: #666;
+}
+.modal__other-login-container ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin: 20px 0 20px;
+  padding: 0 30px;
+}
+.modal__other-login-container ul svg {
+  width: 55px;
+  height: 55px;
+}
+.google-icon svg {
+  border-radius: 50%;
+  border: 1px solid #e1e2e3;
+}
+.modal__other-login-container li {
+  text-align: center;
+}
+.modal__close-button {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 20px;
+  right: 20px;
+  fill: #666;
+}
+/* modal page 1 끝 */
+/* modal page 2 시작 */
+.second-page {
+  display: none;
+}
+.modal__sign-header {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  position: relative;
+  margin-bottom: 60px;
+}
+.modal__sign-header button {
+  font-size: 17px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.modal__sign-header div {
+  margin: 0 auto;
+}
+.input-title {
+  font-size: 14px;
+  color: #767676;
+  margin-bottom: 10px;
+}
+form input {
+  margin-bottom: 10px;
+}
+fieldset {
+  margin-bottom: 20px;
+}
+select {
+  width: 100%;
+  height: 45px;
+  border-radius: 4px;
+  border: 1px solid #e1e2e3;
+  margin-bottom: 10px;
+  font-size: 17px;
+  padding-left: 16px;
+  appearance: none;
+}
+.input-phone__flex-wrap {
+  display: flex;
+  gap: 10px;
+}
+.input-phone button {
+  height: 45px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  font-size: 17px;
+  appearance: none;
+  white-space: nowrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  background-color: #f2f4f7;
+  color: #b5b5b5;
+  font-size: 14px;
+  font-weight: 600;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.input-password {
+  padding-bottom: 60px;
+}
+.submit-area {
+  width: 399px;
+  height: 79px;
+  background-color: white;
+  margin-bottom: 0;
+  position: fixed;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 642px;
+  left: 398px;
+}
+.submit-area input {
+  width: 90%;
+  height: 50px;
+  border-radius: 30px;
+  background-color: #f2f4f7;
+  color: #b5b5b5;
+  font-weight: 600;
+  border: none;
+}
+
+/* modal page 2 끝 */

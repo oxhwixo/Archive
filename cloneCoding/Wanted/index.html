@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css"
+    />
+    <script type="text/javascript" src="index.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  </head>
+  <body>
+    <div class="road">
+      <div class="spinner"></div>
+      <div class="time"></div>
+    </div>
+    <div class="page">
+      <nav class="nav">
+        <div class="nav__wrap">
+          <div class="nav__top">
+            <button class="nav__menu-button">
+              <img
+                src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Ficon-menu.png&w=17&q=75"
+                alt=""
+              />
+            </button>
+            <a class="nav__logo" href="index.html">
+              <svg width="74" height="21" viewBox="0 0 140 32">
+                <path
+                  fill="currentColor"
+                  d="M89.8 2.2l-5.6 2.4v4.8h-3.8v5.2h3.8v10.2c0 4.2 2.6 7 6.6 7 1.6 0 2.6-.4 3.2-.6V26c-.2 0-1 .2-1.8.2-1.6 0-2.4-.6-2.4-2.6v-8.8H94V9.6h-4.2V2.2zM28.6 9.6l-4 14-4.6-14h-5.6l-4.6 14L6 9.6H0l6.8 21.8h6l4.4-14.6 4.6 14.6h6l6.8-21.8zM134.4 2.2v8.6c-1.4-1-3-1.6-4.8-1.8h-.4-1.6c-5 .4-8.2 4.2-9.2 9-.2.8-.2 1.4-.2 2.2V22c.6 5.6 4.4 10 10.2 10 2.4 0 4.4-.6 6-1.8v1.4h5.4V0l-5.4 2.2zm-5.2 24.4c-3 0-5.6-2.4-5.6-6.2 0-4 2.6-6.2 5.6-6.2s5.2 2.2 5.2 6c0 4.2-2.2 6.4-5.2 6.4zM116.2 18c-.8-5.2-4.6-9-10-9s-9.2 3.8-10 9c-.2.8-.2 1.6-.2 2.6v1.6c.6 5.6 4.4 10 10.2 10 4.6 0 8-2.8 9.4-6.8l-5-1.2c-.8 1.8-2.4 3.2-4.4 3.2-2.8 0-4.6-2.2-5-5.2h15.2v-1.6c0-1 0-1.8-.2-2.6zm-14.8 0c.8-2.2 2.4-3.6 4.8-3.6s4 1.6 4.8 3.6h-9.6zM50.6 11c-1.4-1-3.2-1.8-5.2-1.8H44.8h-.6c-5.2.4-8.6 4-9.4 9-.2.8-.2 1.4-.2 2.2v1.8c.6 5.6 4.4 10 10.2 10 2.4 0 4.4-.6 6-1.8v1.4h5.6V9.6h-5.6V11zm-5.2 15.6c-3 0-5.6-2.4-5.6-6.2 0-4 2.6-6.2 5.6-6.2s5.2 2.2 5.2 6c0 4.2-2.2 6.4-5.2 6.4zM71.2 9c-2.2 0-4.6 1-6 3.2V9.6h-5.6v21.8h5.6V18.8c0-2.6 1.4-4.6 4-4.6 2.8 0 3.8 2 3.8 4.4v12.8h5.6V17.6c.2-4.8-2.2-8.6-7.4-8.6z"
+                ></path>
+              </svg>
+            </a>
+          </div>
+          <div class="nav__main">
+            <ul class="nav__menu-wrap">
+              <li class="nav__menu-item">
+                <a href="./recr.html">채용</a>
+              </li>
+              <li class="nav__menu-item">
+                <a href="">이벤트</a>
+              </li>
+              <li class="nav__menu-item">
+                <a href="">직군별 연봉</a>
+              </li>
+              <li class="nav__menu-item">
+                <a href="">이력서</a>
+              </li>
+              <li class="nav__menu-item">
+                <a href="">커뮤니티</a>
+                <em>New</em>
+              </li>
+              <li class="nav__menu-item">
+                <a href="">프리랜서</a>
+              </li>
+              <li class="nav__menu-item">
+                <a href="">AI 합격예측</a>
+                <em>Beta</em>
+              </li>
+            </ul>
+          </div>
+          <div class="nav__aside">
+            <ul class="nav__aside-wrap">
+              <li class="nav__search">
+                <button class="nav__search-button">
+                  <svg
+                    xmlns="https://www.w3.org/2000/svg"
+                    xmlns:xlink="https://www.w3.org/1999/xlink"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 18 18"
+                  >
+                    <defs>
+                      <path
+                        id="qt2dnsql4a"
+                        d="M15.727 17.273a.563.563 0 10.796-.796l-4.875-4.875-.19-.165a.563.563 0 00-.764.028 5.063 5.063 0 111.261-2.068.562.562 0 101.073.338 6.188 6.188 0 10-1.943 2.894l4.642 4.644z"
+                      ></path>
+                    </defs>
+                    <g fill="none" fill-rule="evenodd">
+                      <use
+                        fill="#333"
+                        fill-rule="nonzero"
+                        stroke="#333"
+                        stroke-width=".3"
+                        xlink:href="#qt2dnsql4a"
+                      ></use>
+                    </g>
+                  </svg>
+                </button>
+              </li>
+              <li class="nav__sign">
+                <button class="nav__sign-button">회원가입/로그인</button>
+              </li>
+              <li>
+                <div class="line"></div>
+              </li>
+              <li class="nav__dashboard">
+                <button class="nav__dashboard-button round-button">
+                  기업 서비스
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <main class="main">
+        <div class="top-banner">
+          <div class="swiper mySwiper">
+            <div class="button-position">
+              <div></div>
+              <div class="center">
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"><</div>
+                <div class="swiper-button-next">></div>
+              </div>
+              <div></div>
+            </div>
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="main_banner/main_banner_1.jpg" alt="" />
+                <div class="plus-info">
+                  <h2>배너에도 제목이 있네</h2>
+                  <h3>설명도 써줘야하네 우아우아우어쩌구저쩌구</h3>
+                  <div class="line"></div>
+                  <a href="" class="go-button">
+                    <div>바로가기 ></div>
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <img src="main_banner/main_banner_2.jpg" alt="" />
+                <div class="plus-info">
+                  <h2>배너에도 제목이 있네</h2>
+                  <h3>설명도 써줘야하네 우아우아우어쩌구저쩌구</h3>
+                  <div class="line"></div>
+                  <a href="" class="go-button">
+                    <div>바로가기 ></div>
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <img src="main_banner/main_banner_3.jpg" alt="" />
+                <div class="plus-info">
+                  <h2>배너에도 제목이 있네</h2>
+                  <h3>설명도 써줘야하네 우아우아우어쩌구저쩌구</h3>
+                  <div class="line"></div>
+                  <a href="" class="go-button">
+                    <div>바로가기 ></div>
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <img src="main_banner/main_banner_5.jpg" alt="" />
+                <div class="plus-info">
+                  <h2>배너에도 제목이 있네</h2>
+                  <h3>설명도 써줘야하네 우아우아우어쩌구저쩌구</h3>
+                  <div class="line"></div>
+                  <a href="" class="go-button">
+                    <div>바로가기 ></div>
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <img src="main_banner/main_banner_4.jpg" alt="" />
+                <div class="plus-info">
+                  <h2>배너에도 제목이 있네</h2>
+                  <h3>설명도 써줘야하네 우아우아우어쩌구저쩌구</h3>
+                  <div class="line"></div>
+                  <a href="" class="go-button">
+                    <div>바로가기 ></div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="autoplay-progress">
+              <span></span>
+            </div>
+          </div>
+        </div>
+        <section class="main-section">
+          <div class="main-section__content">
+            <div class="main-section__content-header">
+              <h2>나에게 필요한 커리어 인사이트</h2>
+              <button>
+                <svg width="24" height="24" viewBox="0 0 17 17">
+                  <defs>
+                    <filter id="bfoh3u0w3a">
+                      <feColorMatrix
+                        in="SourceGraphic"
+                        values="0 0 0 0 0.600000 0 0 0 0 0.600000 0 0 0 0 0.600000 0 0 0 1.000000 0"
+                      ></feColorMatrix>
+                    </filter>
+                  </defs>
+                  <g fill="none" fill-rule="evenodd">
+                    <g>
+                      <g>
+                        <g
+                          transform="translate(-1080 -374) translate(1080 374)"
+                        >
+                          <g>
+                            <path
+                              stroke="#999"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="1.2"
+                              d="M9.421 13.334c-.736.277-1.535.43-2.368.43-3.706 0-6.71-3.005-6.71-6.711 0-3.707 3.004-6.71 6.71-6.71 1.853 0 3.53.75 4.745 1.965 1.214 1.214 1.965 2.892 1.965 4.745 0 1.853-.75 3.53-1.965 4.745"
+                              transform="translate(1 1)"
+                            ></path>
+                            <path
+                              fill="#999"
+                              d="M6.382 10.408c0-.371.3-.671.67-.671.371 0 .672.3.672.67 0 .372-.3.672-.671.672-.37 0-.671-.3-.671-.671"
+                              transform="translate(1 1) rotate(-180 7.053 10.408)"
+                            ></path>
+                            <path
+                              stroke="#999"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="1.2"
+                              d="M5.04 5.655c0-1.08.901-1.958 2.013-1.958 1.11 0 2.013.877 2.013 1.958 0 1.08-1.007 1.957-2.013 1.957v.783"
+                              transform="translate(1 1)"
+                            ></path>
+                          </g>
+                        </g>
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </button>
+            </div>
+            <section class="main-section__content-subject-section">
+              <button class="main-section__button--move left">
+                <svg
+                  class="SvgIcon_SvgIcon__root__svg__DKYBi"
+                  viewBox="0 0 18 18"
+                >
+                  <path
+                    d="m6.045 9 5.978-5.977a.563.563 0 1 0-.796-.796L4.852 8.602a.562.562 0 0 0 0 .796l6.375 6.375a.563.563 0 0 0 .796-.796L6.045 9z"
+                  ></path>
+                </svg>
+              </button>
+              <ul class="main-section__subject-wrapper">
+                <li class="main-section__subject">
+                  <button>회사생활</button>
+                </li>
+                <li class="main-section__subject">
+                  <button>리더십</button>
+                </li>
+                <li class="main-section__subject">
+                  <button>커리어고민</button>
+                </li>
+                <li class="main-section__subject">
+                  <button>인간관계</button>
+                </li>
+                <li class="main-section__subject">
+                  <button>라이프스타일</button>
+                </li>
+                <li class="main-section__subject">
+                  <button>취업/이직</button>
+                </li>
+                <li class="main-section__subject">
+                  <button>IT/기술</button>
+                </li>
+                <li class="main-section__subject">
+                  <button>리더십</button>
+                </li>
+                <li class="main-section__subject">
+                  <button>콘텐츠 제작</button>
+                </li>
+                <li class="main-section__subject">
+                  <button>MD</button>
+                </li>
+                <li class="main-section__subject">
+                  <button>UX/UI</button>
+                </li>
+                <li class="main-section__subject">
+                  <button>마케팅</button>
+                </li>
+                <li class="main-section__subject">
+                  <button>브랜딩</button>
+                </li>
+              </ul>
+              <button class="main-section__button--move right">
+                <svg
+                  class="SvgIcon_SvgIcon__root__svg__DKYBi"
+                  viewBox="0 0 18 18"
+                >
+                  <path
+                    d="m11.955 9-5.978 5.977a.563.563 0 0 0 .796.796l6.375-6.375a.563.563 0 0 0 0-.796L6.773 2.227a.562.562 0 1 0-.796.796L11.955 9z"
+                  ></path>
+                </svg>
+              </button>
+              <button class="main-section__button--square">
+                <svg width="18" height="18" viewBox="0 0 24 24">
+                  <path
+                    fill="currentColor"
+                    d="M12 10a2 2 0 1 1-.001 4.001A2 2 0 0 1 12 10zm7 0a2 2 0 1 1-.001 4.001A2 2 0 0 1 19 10zM5 10a2 2 0 1 1-.001 4.001A2 2 0 0 1 5 10z"
+                  ></path>
+                </svg>
+              </button>
+            </section>
+            <section class="main-section__content-section">
+              <ul class="main-section__content-wrapper">
+                <li class="main-section__content-card">
+                  <a href="">
+                    <img src="./main_card/main_card_1.jpg" alt="" />
+                    <p class="title">
+                      인사이트 카드 제목 부분같은 건 좀 통일 해도 되겠죠?
+                    </p>
+                    <p class="info">
+                      설명이 뭐라고 뭐라고 적혀있네요. 여기 부분은 좀 길게써야지
+                      잘 만들어졌는지 테스트가 가능할거같네요. 그래서 길게
+                      써보는중
+                    </p>
+                    <div class="profile-wrap">
+                      <img
+                        src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Ft1.daumcdn.net%2Fbrunch%2Fstatic%2Ficon%2Fios%2Ficon120.png&amp;w=60&amp;q=90"
+                        alt="brunch"
+                        class="profile"
+                      />
+                      <span class="name">승이승이</span>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+              <button class="main-section__more-button">
+                <span>더 많은 콘텐츠 보기</span>
+                <svg
+                  class="SvgIcon_SvgIcon__root__svg__DKYBi"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M7.37374 2.7578C7.62384 2.29823 8.19915 2.12841 8.65872 2.37851L12.453 4.44332L12.5682 4.51706C12.8266 4.70995 12.962 5.0165 12.9465 5.3242C12.9472 5.33886 12.9475 5.35361 12.9475 5.36843C12.9475 5.67552 12.8014 5.94849 12.5749 6.1216L10.2985 9.54035L10.2123 9.65118C9.90279 9.99393 9.38074 10.0674 8.98483 9.80382L8.874 9.71768C8.53125 9.40817 8.45772 8.88612 8.72135 8.49021L9.9678 6.61778C7.12241 7.48689 5.05275 10.1333 5.05275 13.2632C5.05275 17.1001 8.1632 20.2105 12.0001 20.2105C13.869 20.2105 15.6179 19.471 16.913 18.176C18.2081 16.8809 18.9475 15.132 18.9475 13.2632C18.9475 11.3954 18.208 9.64641 16.9127 8.35009C16.5429 7.97997 16.5431 7.38013 16.9132 7.01031C17.2834 6.64048 17.8832 6.64072 18.253 7.01084C19.8998 8.65888 20.8423 10.8879 20.8423 13.2632C20.8423 15.6396 19.8997 17.8688 18.2528 19.5158C16.6058 21.1627 14.3766 22.1053 12.0001 22.1053C7.11676 22.1053 3.15801 18.1465 3.15801 13.2632C3.15801 9.34005 5.71295 6.01369 9.2497 4.8572L7.75303 4.04277L7.64425 3.97373C7.26808 3.69759 7.14449 3.17907 7.37374 2.7578Z"
+                  ></path>
+                </svg>
+              </button>
+              <a href="" class="main-section__test-banner">
+                <div>내 유형과 가장 잘 어울리는 회사는?</div>
+                <div>유형테스트 하러가기 ></div>
+              </a>
+              <div></div>
+            </section>
+            <aside>
+              <img
+                src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fimage.wanted.co.kr%2Fuserweb%2Fcareerhome%2Fcreator-application.png&w=144&q=90"
+                alt=""
+              />
+              <p>즐겨보는<br />크리에이터의 글도<br />추천하고 싶다면?</p>
+              <a href="">크리에이터 추천하기 ></a>
+              <svg
+                class="SvgIcon_SvgIcon__root__svg__DKYBi"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M17.97 19.03a.749.749 0 1 0 1.06-1.06l-6.5-6.5a.749.749 0 0 0-1.06 0l-6.5 6.5a.749.749 0 1 0 1.06 1.06L12 13.06l5.97 5.97zM12 10.94 6.03 4.97a.749.749 0 1 0-1.06 1.06l6.5 6.5a.749.749 0 0 0 1.06 0l6.5-6.5a.749.749 0 1 0-1.06-1.06L12 10.94z"
+                ></path>
+              </svg>
+            </aside>
+          </div>
+        </section>
+        <a class="line-banner">
+          직군/직무를 입력하면 관련 콘텐츠를 추천해 드려요. 👀 >
+        </a>
+        <section class="event-section">
+          <div class="event-section__header">
+            <button class="main-section__button--move left visible">
+              <svg
+                class="SvgIcon_SvgIcon__root__svg__DKYBi"
+                viewBox="0 0 18 18"
+              >
+                <path
+                  d="m6.045 9 5.978-5.977a.563.563 0 1 0-.796-.796L4.852 8.602a.562.562 0 0 0 0 .796l6.375 6.375a.563.563 0 0 0 .796-.796L6.045 9z"
+                ></path>
+              </svg>
+            </button>
+            <h1>커리어 성장을 위한 맞춤</h1>
+            <a href="" class="event-section__all-button"> 이벤트 전체보기 > </a>
+            <button class="main-section__button--move right">
+              <svg
+                class="SvgIcon_SvgIcon__root__svg__DKYBi"
+                viewBox="0 0 18 18"
+              >
+                <path
+                  d="m11.955 9-5.978 5.977a.563.563 0 0 0 .796.796l6.375-6.375a.563.563 0 0 0 0-.796L6.773 2.227a.562.562 0 1 0-.796.796L11.955 9z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <section class="event-section__card-wrapper">
+            <ul>
+              <li class="event-section__card">
+                <a href="">
+                  <img src="./main_event/main_event_1.jpg" alt="" />
+                  <div>
+                    <span class="article-box orange">
+                      <span class="article-icon">아티클</span>
+                    </span>
+                  </div>
+                  <h1>이벤트 카드의 제목입니다아아</h1>
+                </a>
+              </li>
+              <li class="event-section__card">
+                <a href="">
+                  <img src="./main_event/main_event_2.jpg" alt="" />
+                  <div>
+                    <span class="article-box">
+                      <span class="article-icon">교육</span>
+                    </span>
+                  </div>
+                  <h1>이벤트 카드의 제목입니다아아</h1>
+                </a>
+              </li>
+              <li class="event-section__card">
+                <a href="">
+                  <img src="./main_event/main_event_3.jpg" alt="" />
+                  <div>
+                    <span class="article-box orange">
+                      <span class="article-icon">아티클</span>
+                    </span>
+                  </div>
+                  <h1>이벤트 카드의 제목입니다아아</h1>
+                </a>
+              </li>
+            </ul>
+          </section>
+        </section>
+        <div></div>
+        <section class="recruit-section">
+          <h1>채용 정보를 찾고 계셨나요?</h1>
+          <ul>
+            <li>
+              <svg
+                class="SvgIcon_SvgIcon__root__svg__DKYBi"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M9.47375 1.89474C13.6597 1.89474 17.0527 5.2878 17.0527 9.47369C17.0527 10.2532 16.9341 11.0197 16.7041 11.7514C16.5471 12.2505 16.0153 12.5279 15.5161 12.371C15.017 12.2141 14.7396 11.6822 14.8966 11.1831C15.069 10.6345 15.158 10.0597 15.158 9.47369C15.158 6.33424 12.6132 3.78948 9.47375 3.78948C6.33428 3.78948 3.78952 6.33424 3.78952 9.47369C3.78952 12.6125 6.33466 15.1579 9.47375 15.1579C11.0057 15.1579 12.4626 14.5505 13.514 13.5044C13.8507 13.1694 14.3761 13.1397 14.7463 13.4147L14.8524 13.5064L21.8282 20.4883C22.198 20.8584 22.1977 21.4583 21.8276 21.8281C21.4911 22.1643 20.9648 22.1946 20.594 21.9193L20.4878 21.8275L14.1361 15.4699L14.0594 15.5312C12.8519 16.4355 11.3781 16.9722 9.8318 17.0443L9.47375 17.0526C5.28818 17.0526 1.89478 13.6589 1.89478 9.47369C1.89478 5.2878 5.28785 1.89474 9.47375 1.89474Z"
+                ></path>
+              </svg>
+              <a href="">채용공고 ></a>
+            </li>
+            <li>
+              <svg
+                width="28"
+                height="28"
+                viewBox="0 0 28 28"
+                xmlns="https://www.w3.org/2000/svg"
+              >
+                <defs>
+                  <path
+                    d="M16.46 12.565c-.631.802-1.025 1.667-1.039 2.59-.02 1.45.793 2.538 2.286 3.154l.116.038c3.487.898 5.788 2.958 5.788 5.03l.014 1.226c0 .026-.194.188-.35.189H4.662c-.136 0-.274-.122-.274-.178l-.014-1.248c0-1.997 2.086-3.93 5.412-4.868a4.468 4.468 0 0 0 1.275-.538c.775-.474 1.316-1.135 1.448-2.014a.875.875 0 0 0-1.731-.259c-.044.292-.256.552-.629.779a2.898 2.898 0 0 1-.795.337c-4.04 1.137-6.73 3.632-6.73 6.573l.014 1.248c0 1.062.965 1.918 2.024 1.918h18.613c1.061-.003 2.099-.871 2.099-1.949l-.014-1.227c0-3.003-2.9-5.612-7.039-6.697-.825-.354-1.16-.816-1.15-1.49.006-.473.248-1.003.663-1.53.272-.346.545-.606.71-.736l.087-.08c1.233-1.29 2.03-3 2.03-4.666 0-3.648-3.053-6.709-6.692-6.709-3.639 0-6.692 3.061-6.692 6.709 0 1.57.443 2.914 1.357 4.048a.875.875 0 1 0 1.363-1.097c-.655-.813-.97-1.768-.97-2.951 0-2.682 2.27-4.959 4.942-4.959s4.941 2.276 4.941 4.959c0 1.162-.587 2.437-1.506 3.417-.258.211-.6.545-.944.981z"
+                    id="IconProfileThick-a"
+                  ></path>
+                </defs>
+                <g fill="none" fill-rule="evenodd">
+                  <mask id="IconProfileThick-b" fill="#fff">
+                    <use xlink:href="#IconProfileThick-a"></use>
+                  </mask>
+                  <use
+                    fill="#333"
+                    fill-rule="nonzero"
+                    xlink:href="#IconProfileThick-a"
+                  ></use>
+                  <g mask="url(#IconProfileThick-b)" fill="#333">
+                    <path d="M0 0h28v28H0z"></path>
+                  </g>
+                </g>
+              </svg>
+              <a href="">내 프로필 ></a>
+            </li>
+            <li>
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 28 28"
+                xmlns="https://www.w3.org/2000/svg"
+              >
+                <defs>
+                  <path
+                    d="M10.208 25.083a.875.875 0 0 1-.875-.875v-6.125h-1.75v6.125a.875.875 0 0 1-.875.875H2.042a.875.875 0 0 1-.875-.875V4.375c0-.483.391-.875.875-.875h12.833c.483 0 .875.392.875.875v3.791h9.625c.446 0 .814.334.868.766l.007.11v10.5a.875.875 0 0 1-1.75 0V9.917h-8.75v13.416h9.625a.875.875 0 0 1 0 1.75H10.208zM14 5.25H2.917v18.083h2.916v-6.125c0-.483.392-.875.875-.875h3.5c.484 0 .875.392.875.875v6.125H14V5.25zm4.375 10.792c.644 0 1.167.522 1.167 1.166v1.167a1.167 1.167 0 0 1-2.334 0v-1.167c0-.644.523-1.166 1.167-1.166zm0-4.667c.644 0 1.167.522 1.167 1.167v1.166a1.167 1.167 0 0 1-2.334 0v-1.166c0-.645.523-1.167 1.167-1.167zm-11.5 0a1 1 0 0 1 1 1v1.5a1 1 0 0 1-1 1h-.333a1 1 0 0 1-1-1v-1.5a1 1 0 0 1 1-1h.333zm0-4.667a1 1 0 0 1 1 1v1.5a1 1 0 0 1-1 1h-.333a1 1 0 0 1-1-1v-1.5a1 1 0 0 1 1-1h.333z"
+                    id="building-icon-a"
+                  ></path>
+                </defs>
+                <g fill="none" fill-rule="evenodd">
+                  <mask id="building-icon-b" fill="#fff">
+                    <use xlink:href="#building-icon-a"></use>
+                  </mask>
+                  <use
+                    fill="#333"
+                    fill-rule="nonzero"
+                    xlink:href="#building-icon-a"
+                  ></use>
+                  <g mask="url(#building-icon-b)" fill="#333">
+                    <path d="M0 0h28v28H0z"></path>
+                  </g>
+                </g>
+              </svg>
+              <a href="">매치업 ></a>
+            </li>
+            <li>
+              <svg
+                width="30"
+                height="30"
+                viewBox="0 0 15 15"
+                fill="none"
+                xmlns="https://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4.66699 10.51C5.55699 10.51 6.30999 11.11 6.54099 11.927H13.875C14.168 11.927 14.406 12.165 14.406 12.458C14.406 12.752 14.168 12.99 13.875 12.99H6.54099C6.30999 13.807 5.55799 14.406 4.66699 14.406C3.77499 14.406 3.02299 13.806 2.79199 12.989H1.12499C0.831994 12.989 0.593994 12.752 0.593994 12.459C0.593994 12.165 0.831994 11.927 1.12499 11.927H2.79199C3.02399 11.109 3.77599 10.51 4.66699 10.51V10.51ZM4.66699 11.573C4.17799 11.573 3.78099 11.97 3.78099 12.458C3.78099 12.947 4.17799 13.344 4.66699 13.344C5.15499 13.344 5.55199 12.947 5.55199 12.458C5.55199 11.97 5.15499 11.573 4.66699 11.573ZM10.333 5.55299C11.225 5.55299 11.977 6.15199 12.208 6.96899H13.875C14.168 6.96899 14.406 7.20699 14.406 7.49999C14.406 7.79299 14.168 8.03099 13.875 8.03099H12.208C11.976 8.84899 11.224 9.44799 10.333 9.44799C9.44299 9.44799 8.68999 8.84799 8.45899 8.03199H1.12499C0.831994 8.03199 0.593994 7.79299 0.593994 7.49999C0.593994 7.20699 0.831994 6.96899 1.12499 6.96899H8.45899C8.68999 6.15199 9.44199 5.55199 10.333 5.55199V5.55299ZM10.333 6.61499C9.84499 6.61499 9.44799 7.01099 9.44799 7.49999C9.44799 7.98899 9.84499 8.38499 10.333 8.38499C10.822 8.38499 11.219 7.98899 11.219 7.49999C11.219 7.01099 10.822 6.61499 10.333 6.61499V6.61499ZM4.66699 0.593994C5.55699 0.593994 6.30999 1.19299 6.54099 2.00999H13.875C14.168 2.00999 14.406 2.24799 14.406 2.54199C14.406 2.83499 14.168 3.07199 13.875 3.07199L6.54099 3.07399C6.30899 3.89099 5.55799 4.48999 4.66699 4.48999C3.77599 4.48999 3.02399 3.88999 2.79199 3.07399L1.12499 3.07299C0.831994 3.07299 0.593994 2.83499 0.593994 2.54199C0.593994 2.24799 0.831994 2.00999 1.12499 2.00999H2.79199C3.02399 1.19299 3.77599 0.593994 4.66699 0.593994V0.593994ZM4.66699 1.65599C4.17799 1.65599 3.78099 2.05299 3.78099 2.54199C3.78099 3.02999 4.17799 3.42699 4.66699 3.42699C5.15499 3.42699 5.55199 3.02999 5.55199 2.54199C5.55199 2.05299 5.15499 1.65599 4.66699 1.65599V1.65599Z"
+                  fill="#333"
+                ></path>
+              </svg>
+              <a href="">직군별 연봉 ></a>
+            </li>
+          </ul>
+        </section>
+      </main>
+      <footer>
+        <nav class="footer-nav">
+          <ul class="footer-nav__left">
+            <li>
+              <a href="./index.html" class="logo"
+                ><img src="wantde_logo.jpg" alt=""
+              /></a>
+            </li>
+            <li>
+              <a href="">기업소개</a>
+            </li>
+            <li>
+              <a href="">이용약관</a>
+            </li>
+            <li>
+              <a href="">고객센터</a>
+            </li>
+            <li>
+              <a href="">개인정보 처리방침</a>
+            </li>
+          </ul>
+          <ul class="footer-nav__right">
+            <li>
+              <a href="">
+                <img src="./footer/footer_1.jpg" alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="./footer/footer_2.jpg" alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="./footer/footer_3.jpg" alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="./footer/footer_4.jpg" alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="./footer/footer_5.jpg" alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="./footer/footer_6.jpg" alt="" />
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="footer-info">
+          <p>
+            (주)원티드랩 (대표이사:이복기) | 서울특별시 송파구 올림픽로 300
+            롯데월드타워 35층 | 통신판매번호 : 2020-서울송파-3147 <br />
+            유료직업소개사업등록번호 : (국내) 제2020-3230259-14-5-00018호 |
+            사업자등록번호 : 299-86-00021 | 02-539-7118 <br />© Wantedlab, Inc.
+          </p>
+        </div>
+      </footer>
+    </div>
+    <section class="modal">
+      <div class="modal__container">
+        <div class="first-page">
+          <div class="modal__logo">
+            <svg viewBox="0 0 93 28" class="css-1kn8y82">
+              <path
+                d="M4.77051 23H8.68066L11.626 13.7578L14.5967 23H18.5068L22.874 9.28906H18.9639L16.4248 18.0996L13.4541 9.28906H9.79785L6.82715 18.0996L4.28809 9.28906H0.37793L4.77051 23ZM22.8486 16.1191C22.8486 19.6865 25.1084 23.3301 29.5264 23.3301C31.0371 23.3428 32.332 22.9111 33.3857 22.1621V23H36.9658V9.28906H33.3857V10.127C32.332 9.37793 31.0371 8.94629 29.5264 8.95898C25.1084 8.95898 22.8486 12.5518 22.8486 16.1191ZM26.3271 16.1191C26.3145 13.6689 27.9902 12.2725 29.9326 12.2598C31.8496 12.2725 33.3604 13.6309 33.3604 16.0938C33.3604 18.5693 31.8496 20.0166 29.9326 20.0039C27.9268 20.0166 26.3145 18.5693 26.3271 16.1191ZM39.1494 23H42.8564V15.1035C42.8564 13.5166 43.7832 12.2725 45.4209 12.2598C47.1855 12.2725 47.9346 13.4658 47.9346 15.002V23H51.6416V14.3418C51.6416 11.3457 50.0928 8.9209 46.6904 8.9082C45.2432 8.9209 43.6309 9.54297 42.7803 10.8887V9.28906H39.1494V23ZM52.708 12.5645H55.1963V18.9375C55.1963 21.6035 56.8594 23.3301 59.5381 23.3301C60.6172 23.3301 61.29 23.1396 61.6201 23V19.7754C61.4297 19.8516 60.9219 19.9023 60.4775 19.9023C59.4238 19.9023 58.8779 19.5088 58.8779 18.3027V12.5645H61.6201V9.28906H58.8779V4.69336L55.2471 6.2168V9.28906H52.708V12.5645ZM62.8389 16.1445C62.8389 20.0928 65.3652 23.3428 69.5166 23.3301C72.5381 23.3428 74.7217 21.6035 75.6865 19.0898L72.3857 18.4043C71.8398 19.585 70.8369 20.3594 69.5166 20.3594C67.752 20.3594 66.5586 18.9756 66.2666 17.1094H76.1436C76.1816 16.792 76.1943 16.4746 76.1943 16.1445C76.1943 11.9551 73.4395 8.95898 69.5166 8.95898C65.4414 8.95898 62.8389 12.1836 62.8389 16.1445ZM66.4443 14.5449C66.9014 13.1992 67.9932 12.2598 69.5166 12.2598C71.04 12.2598 72.1445 13.1992 72.6143 14.5449H66.4443ZM77.4131 16.1191C77.4131 20.1055 79.9395 23.3428 84.0908 23.3301C85.6016 23.3428 86.8965 22.8984 87.9502 22.1621V23L91.5049 23.0254V3.27148L87.874 4.69336V10.0762C86.7568 9.32715 85.4365 8.95898 84.0908 8.95898C80.0029 8.95898 77.4131 12.1201 77.4131 16.1191ZM80.8662 16.1191C80.8662 13.6562 82.542 12.2725 84.4717 12.2598C86.4141 12.2725 87.9121 13.6309 87.9248 16.0684C87.9121 18.5693 86.4141 20.0166 84.4717 20.0039C82.4912 20.0166 80.8662 18.5693 80.8662 16.1191Z"
+                fill="var(--theme-palette-colors-black-100)"
+              ></path>
+            </svg>
+          </div>
+          <div class="modal__info">
+            <h1>직장인을 위한<br />커리어 플랫폼, 원티드!</h1>
+            <h2>
+              커리어 성장과 행복을 위한 여정<br />
+              지금 원티드에서 시작하세요.
+            </h2>
+          </div>
+          <div class="modal__input-container">
+            <div>이메일</div>
+            <input type="email" name="first-page-input" id="" />
+            <button class="modal__email-button long-round-button">
+              이메일로 계속하기
+            </button>
+          </div>
+          <div class="modal__other-login-container">
+            <div>or</div>
+            <div>다음 계정으로 계속하기</div>
+            <ul class="modal__social-login">
+              <li>
+                <button>
+                  <svg viewBox="0 0 57 56" class="css-1h47l4s">
+                    <path
+                      d="M0.5 28C0.5 12.536 13.036 0 28.5 0C43.964 0 56.5 12.536 56.5 28C56.5 43.464 43.964 56 28.5 56C13.036 56 0.5 43.464 0.5 28Z"
+                      fill="#FEE500"
+                    ></path>
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M28.5 16.2063C21.5606 16.2063 15.9286 20.5812 15.9286 25.9617C15.9286 29.3183 18.1034 32.2474 21.4223 34.0326L20.0269 39.1492C20.0005 39.2509 20.006 39.3583 20.0424 39.4569C20.0788 39.5555 20.1446 39.6406 20.2307 39.7008C20.3169 39.761 20.4195 39.7934 20.5246 39.7937C20.6297 39.7939 20.7324 39.7621 20.8189 39.7023L26.9286 35.6417C27.444 35.6417 27.972 35.7297 28.5 35.7297C35.4394 35.7297 41.0714 31.3549 41.0714 25.9617C41.0714 20.5686 35.4394 16.2063 28.5 16.2063Z"
+                      fill="#181600"
+                    ></path>
+                  </svg>
+                </button>
+                <div>Kakao</div>
+              </li>
+              <li>
+                <button>
+                  <svg viewBox="0 0 57 56" class="css-1h47l4s">
+                    <path
+                      d="M0.5 28C0.5 12.536 13.036 0 28.5 0C43.964 0 56.5 12.536 56.5 28C56.5 43.464 43.964 56 28.5 56C13.036 56 0.5 43.464 0.5 28Z"
+                      fill="#1877F2"
+                    ></path>
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M28.5 14.2855C20.9256 14.2855 14.7857 20.4253 14.7857 27.9997C14.7857 34.8445 19.801 40.5181 26.3578 41.5467V31.9645H22.8744V27.9997H26.3578V24.9785C26.3578 21.5417 28.404 19.6423 31.5377 19.6423C33.038 19.6423 34.607 19.9111 34.607 19.9111V23.2848H32.8776C31.1743 23.2848 30.6422 24.3421 30.6422 25.4269V27.9997H34.4465L33.839 31.9645H30.6422V41.5467C37.199 40.5181 42.2143 34.8445 42.2143 27.9997C42.2143 20.4253 36.0744 14.2855 28.5 14.2855Z"
+                      fill="#fff"
+                    ></path>
+                  </svg>
+                </button>
+                <div>Kakao</div>
+              </li>
+              <li class="google-icon">
+                <button>
+                  <svg viewBox="0 0 57 56" class="css-1h47l4s">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M41.6657 28.3122C41.6657 27.34 41.5789 26.4044 41.4158 25.5068H28.5V30.8112H35.8813C35.5629 32.5255 34.5968 33.9792 33.1446 34.9514V38.3922H37.5758C40.1693 36.0044 41.6657 32.4889 41.6657 28.3122Z"
+                      fill="#3D82F0"
+                    ></path>
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M28.5003 41.7146C32.2032 41.7146 35.3072 40.4864 37.5761 38.3927L33.1449 34.9504C31.9167 35.7733 30.3457 36.2594 28.5003 36.2594C24.9285 36.2594 21.9053 33.8472 20.8264 30.606H16.2443V34.1595C18.5011 38.6411 23.1396 41.7146 28.5003 41.7146Z"
+                      fill="#31A752"
+                    ></path>
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M20.8261 30.606C20.5518 29.7831 20.3964 28.9039 20.3964 28.0002C20.3964 27.0966 20.5518 26.2174 20.8261 25.3945V21.841H16.244C15.316 23.6924 14.7857 25.7877 14.7857 28.0002C14.7857 30.2128 15.316 32.3081 16.244 34.1595L20.8261 30.606Z"
+                      fill="#F9BA00"
+                    ></path>
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M28.5003 19.7407C30.5133 19.7407 32.322 20.4325 33.7422 21.7917L37.6767 17.8588C35.3011 15.6447 32.1971 14.2855 28.5003 14.2855C23.1396 14.2855 18.5011 17.359 16.2443 21.842L20.8264 25.394C21.9053 22.1529 24.9285 19.7407 28.5003 19.7407Z"
+                      fill="#E64234"
+                    ></path>
+                  </svg>
+                </button>
+                <div>Kakao</div>
+              </li>
+              <li>
+                <button>
+                  <svg viewBox="0 0 57 56" class="css-1h47l4s">
+                    <path
+                      d="M0.5 28C0.5 12.536 13.036 0 28.5 0C43.964 0 56.5 12.536 56.5 28C56.5 43.464 43.964 56 28.5 56C13.036 56 0.5 43.464 0.5 28Z"
+                      fill="black"
+                    ></path>
+                    <path
+                      d="M28.8182 19.359C30.0068 19.359 31.4968 18.5307 32.384 17.4264C33.1876 16.4256 33.7736 15.0279 33.7736 13.6302C33.7736 13.4404 33.7568 13.2506 33.7233 13.0953C32.4008 13.147 30.8104 14.0098 29.8561 15.1659C29.1028 16.046 28.4164 17.4264 28.4164 18.8413C28.4164 19.0484 28.4499 19.2555 28.4666 19.3245C28.5503 19.3418 28.6843 19.359 28.8182 19.359ZM24.6329 40.2381C26.2568 40.2381 26.9767 39.1165 29.0023 39.1165C31.0615 39.1165 31.5135 40.2036 33.3215 40.2036C35.0961 40.2036 36.2847 38.5126 37.4064 36.8561C38.6619 34.958 39.1809 33.0944 39.2144 33.0081C39.0972 32.9736 35.6988 31.5414 35.6988 27.5209C35.6988 24.0352 38.3773 22.465 38.528 22.3442C36.7535 19.7214 34.0581 19.6524 33.3215 19.6524C31.3294 19.6524 29.7055 20.8947 28.6843 20.8947C27.5794 20.8947 26.1229 19.7214 24.3986 19.7214C21.1173 19.7214 17.7858 22.5168 17.7858 27.7969C17.7858 31.0755 19.0247 34.5438 20.5481 36.787C21.8539 38.6851 22.9923 40.2381 24.6329 40.2381Z"
+                      fill="white"
+                    ></path>
+                  </svg>
+                </button>
+                <div>Kakao</div>
+              </li>
+            </ul>
+          </div>
+          <button class="modal__close-button">
+            <svg class="SvgIcon_SvgIcon__root__svg__DKYBi" viewBox="0 0 24 24">
+              <path
+                d="M17.97 19.03a.749.749 0 1 0 1.06-1.06l-6.5-6.5a.749.749 0 0 0-1.06 0l-6.5 6.5a.749.749 0 1 0 1.06 1.06L12 13.06l5.97 5.97zM12 10.94 6.03 4.97a.749.749 0 1 0-1.06 1.06l6.5 6.5a.749.749 0 0 0 1.06 0l6.5-6.5a.749.749 0 1 0-1.06-1.06L12 10.94z"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <form name="sign" class="second-page">
+          <div class="modal__sign-header">
+            <button>취소</button>
+            <div>회원가입</div>
+          </div>
+          <fieldset class="input-mail">
+            <div class="input-title">이메일</div>
+            <input
+              type="email"
+              name=""
+              id=""
+              placeholder="이전 창에서 입력한거 가져와야함 후처리 ㄱ"
+              disabled
+            />
+          </fieldset>
+          <fieldset class="input-name">
+            <div class="input-title">이름</div>
+            <input
+              type="text"
+              name=""
+              id=""
+              placeholder="이름을 입력해주세요."
+            />
+          </fieldset>
+          <fieldset class="input-phone">
+            <div class="input-title">휴대폰 번호</div>
+            <select name="" id="">
+              <option value="KR">South Korea +82</option>
+              <option value="KR">귀찮다</option>
+              <option value="KR">귀찮다</option>
+              <option value="KR">귀찮다</option>
+            </select>
+            <div class="input-phone__flex-wrap">
+              <input
+                type="number"
+                name=""
+                id=""
+                placeholder="(예시) 01034567890"
+              />
+              <button>인증번호 받기</button>
+            </div>
+            <input
+              type="number"
+              name=""
+              id=""
+              placeholder="인증번호를 입력해 주세요."
+              disabled
+            />
+          </fieldset>
+          <fieldset class="input-password">
+            <div class="input-title">비밀번호</div>
+            <input
+              type="password"
+              name=""
+              id=""
+              placeholder="비밀번호를 입력해 주세요."
+            />
+            <input
+              type="password"
+              name=""
+              id=""
+              placeholder="비밀번호를 다시 입력해 주세요."
+            />
+          </fieldset>
+          <fieldset class="submit-area">
+            <input type="submit" value="회원가입하기" />
+          </fieldset>
+        </form>
+      </div>
+    </section>
+  </body>
+  <script>
+    const contentWrapper = document.querySelector(
+      ".main-section__content-wrapper"
+    );
+    const contentCard = document.querySelector(".main-section__content-card");
+
+    for (let i = 0; i < 11; i++) {
+      const newItem = contentCard.cloneNode(true);
+      newItem
+        .querySelector("a img:not(.profile)")
+        .setAttribute("src", `./main_card/main_card_${i + 2}.jpg`);
+      contentWrapper.appendChild(newItem);
+    }
+  </script>
+</html>
